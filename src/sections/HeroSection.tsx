@@ -44,11 +44,15 @@ export default function HeroSection() {
         ref={imageRef}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/hero_bg.jpg)',
+          backgroundImage: 'url(/logo.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
         }}
       />
+
+      {/* Background Overlay */}
+      <div className="absolute inset-0 z-0 bg-black/60" />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-black/70 to-transparent" />
