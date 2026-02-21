@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 3%;
+    --foreground: 0 0% 100%;
+    --card: 220 15% 6%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 20% 3%;
+    --secondary: 220 10% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 220 10% 18%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 15%;
+    --input: 220 10% 15%;
+    --ring: 0 0% 100%;
+    --radius: 0.5rem;
+    
+    /* PS5 Colors */
+    --ps5-bg: #000000;
+    --ps5-surface: #0D0D0D;
+    --ps5-card: #141414;
+    --ps5-card-hover: #1A1A1A;
+    --ps5-border: #2A2A2A;
+    --ps5-text: #FFFFFF;
+    --ps5-text-muted: #8A8A8A;
+    --ps5-blue: #0070D1;
+    --ps5-glow: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--ps5-bg);
+    color: var(--ps5-text);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+  
+  ::selection {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer utilities {
+  /* PS5 Card Styles */
+  .ps5-card {
+    @apply relative overflow-hidden;
+    background: var(--ps5-card);
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .ps5-card:hover {
+    background: var(--ps5-card-hover);
+    transform: scale(1.03);
+    box-shadow: 0 0 0 2px var(--ps5-glow), 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ps5-card-active {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* PS5 Activity Card */
+  .ps5-activity-card {
+    @apply relative;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  /* PS5 Horizontal Scroll Container */
+  .ps5-scroll-container {
+    @apply flex gap-4 overflow-x-auto pb-4;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .ps5-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .ps5-scroll-item {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  
+  /* PS5 Hero Background */
+  .ps5-hero-bg {
+    @apply absolute inset-0;
+    background: linear-gradient(180deg, 
+      rgba(0, 0, 0, 0.3) 0%, 
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+  }
+  
+  /* PS5 Navigation */
+  .ps5-nav {
+    @apply fixed top-0 left-0 right-0 z-50;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    backdrop-filter: blur(10px);
+  }
+  
+  .ps5-nav-item {
+    @apply px-4 py-2 text-sm font-medium transition-all;
+    color: var(--ps5-text-muted);
+    border-radius: 20px;
+  }
+  
+  .ps5-nav-item:hover,
+  .ps5-nav-item.active {
+    color: var(--ps5-text);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* PS5 Section Title */
+  .ps5-section-title {
+    @apply text-lg font-semibold mb-4;
+    color: var(--ps5-text-muted);
+    letter-spacing: 0.02em;
+  }
+  
+  /* PS5 Glow Effect */
+  .ps5-glow {
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.08);
+  }
+  
+  /* PS5 Button */
+  .ps5-btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+  
+  .ps5-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .ps5-btn-primary {
+    @apply ps5-btn;
+    background: white;
+    color: black;
+  }
+  
+  .ps5-btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* PS5 Tag */
+  .ps5-tag {
+    @apply px-3 py-1 text-xs font-medium rounded-full;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--ps5-text-muted);
+  }
+  
+  /* PS5 Progress Bar */
+  .ps5-progress {
+    @apply h-1 rounded-full overflow-hidden;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .ps5-progress-bar {
+    @apply h-full rounded-full;
+    background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.5) 100%);
+  }
+  
+  /* Noise Texture */
+  .ps5-noise {
+    position: relative;
+  }
+  
+  .ps5-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
