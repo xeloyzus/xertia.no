@@ -52,11 +52,11 @@ export default function HeroSection() {
       />
 
       {/* Background Overlay */}
-      <div className="absolute inset-0 z-0 bg-black/60" />
+      <div className="absolute inset-0 z-0 bg-black/35" />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-black/70 to-transparent" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-black/50 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-transparent to-transparent" />
 
       {/* Content */}
       <div ref={contentRef} className="relative z-10 w-full px-6 lg:px-16">
