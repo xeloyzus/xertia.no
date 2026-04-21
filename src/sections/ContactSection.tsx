@@ -80,7 +80,7 @@ export default function ContactSection() {
                 <div>
                   <p className="text-xs text-white/40 mb-0.5">Location</p>
                   <p className="text-white font-medium">
-                    San Francisco / Remote
+                   Stavanger
                   </p>
                 </div>
               </div>
