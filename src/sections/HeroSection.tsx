@@ -44,7 +44,7 @@ export default function HeroSection() {
         ref={imageRef}
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/logo.png)',
+          backgroundImage: 'url(./logo.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
