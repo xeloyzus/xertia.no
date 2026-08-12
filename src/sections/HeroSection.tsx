@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ChevronRight, Play } from 'lucide-react';
+import AsciiCore from '../components/AsciiCore';
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -16,11 +16,6 @@ export default function HeroSection() {
         { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.3 }
       );
 
-      gsap.fromTo(
-        imageRef.current,
-        { opacity: 0, scale: 1.1 },
-        { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
-      );
     }, heroRef);
 
     return () => ctx.revert();
@@ -39,17 +34,8 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-end pb-20 overflow-hidden"
     >
-      {/* Background Image */}
-      <div
-        ref={imageRef}
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(./logo.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
-      />
+      {/* ASCII Holographic Core */}
+      <AsciiCore className="absolute inset-0 z-0 w-full h-full" />
 
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0 bg-black/35" />
@@ -57,6 +43,12 @@ export default function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black via-black/50 to-transparent" />
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+
+      {/* Brand Mark */}
+      <div className="absolute top-6 left-6 lg:left-16 z-20 flex items-center gap-2">
+        <img src="./logo.png" alt="Xertai" className="w-8 h-8 object-contain" />
+        <span className="font-sora font-bold text-white text-lg">Xertai</span>
+      </div>
 
       {/* Content */}
       <div ref={contentRef} className="relative z-10 w-full px-6 lg:px-16">
