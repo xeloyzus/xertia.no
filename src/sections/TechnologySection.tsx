@@ -129,7 +129,7 @@ export default function TechnologySection() {
             </p>
           </div>
           <a
-            href="mailto:hello@xertai.io"
+            href="mailto:xertai.no@protonmail.com"
             className="px-6 py-2.5 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
           >
             Get started

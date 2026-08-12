@@ -203,7 +203,7 @@ export default function ServicesSection() {
 
             {/* CTA */}
             <a
-              href="mailto:hello@xertai.io"
+              href="mailto:xertai.no@protonmail.com"
               className="flex items-center gap-2 px-5 py-2.5 bg-white/10 rounded-full text-sm font-medium hover:bg-white/20 transition-colors whitespace-nowrap"
             >
               <span>Learn more</span>

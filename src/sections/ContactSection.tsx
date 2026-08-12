@@ -54,7 +54,7 @@ export default function ContactSection() {
             <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-10">
               {/* Email */}
               <a
-                href="mailto:hello@xertai.io"
+                href="mailto:xertai.no@protonmail.com"
                 className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all text-left"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
@@ -63,7 +63,7 @@ export default function ContactSection() {
                 <div className="flex-1 min-w-0">
                   <p className="text-xs text-white/40 mb-0.5">Email</p>
                   <p className="text-white font-medium truncate group-hover:text-white/80 transition-colors">
-                    hello@xertai.io
+                    xertai.no@protonmail.com
                   </p>
                 </div>
                 <ArrowUpRight 
@@ -86,18 +86,6 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Support Note */}
-            <div className="pt-8 border-t border-white/10">
-              <p className="text-sm text-white/40">
-                For support inquiries:{' '}
-                <a 
-                  href="mailto:support@xertai.io"
-                  className="text-white/60 hover:text-white transition-colors"
-                >
-                  support@xertai.io
-                </a>
-              </p>
-            </div>
           </div>
         </div>
       </div>
@@ -109,16 +97,8 @@ export default function ContactSection() {
             <span className="font-sora font-bold text-white">Xertai</span>
           </div>
           <p className="text-sm text-white/30">
-            © {new Date().getFullYear()} Xertai Inc. All rights reserved.
+            © {new Date().getFullYear()} Xertai. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-white/30 hover:text-white/60 transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="text-sm text-white/30 hover:text-white/60 transition-colors">
-              Terms
-            </a>
-          </div>
         </div>
       </footer>
     </section>

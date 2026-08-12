@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './App.css';
 
 import Navigation from './components/Navigation';
 import HeroSection from './sections/HeroSection';

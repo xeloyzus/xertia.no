@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,15 +86,6 @@ export default function ProjectsSection() {
           <h2 className="text-lg font-semibold text-white/50 uppercase tracking-wider">
             Projects
           </h2>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors"
-          >
-            <Github size={18} />
-            <span className="hidden sm:inline">View on GitHub</span>
-          </a>
         </div>
 
         {/* Projects Grid - PS5 Style Cards */}
@@ -158,16 +149,6 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* View All CTA */}
-        <div className="mt-8 text-center">
-          <a
-            href="mailto:hello@xertai.io"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full text-sm text-white/70 hover:bg-white/10 hover:text-white transition-all"
-          >
-            <span>Explore all projects</span>
-            <ExternalLink size={16} />
-          </a>
-        </div>
       </div>
     </section>
   );

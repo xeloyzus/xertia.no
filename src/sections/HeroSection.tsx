@@ -97,7 +97,7 @@ export default function HeroSection() {
               <span>Explore</span>
             </button>
             <a
-              href="mailto:hello@xertai.io"
+              href="mailto:xertai.no@protonmail.com"
               className="flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all"
             >
               <span>Contact</span>
