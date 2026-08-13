@@ -1,24 +1,60 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Zap, Shield, Clock, Layers, Server, Workflow } from 'lucide-react';
+import {
+  Smartphone,
+  Brain,
+  Cpu,
+  Layers,
+  Eye,
+  Bot,
+  Monitor,
+  Workflow,
+} from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const techStack = [
-  { icon: Zap, label: 'High Performance', desc: 'Sub-50ms inference' },
-  { icon: Shield, label: 'Enterprise Security', desc: 'SOC 2 compliant' },
-  { icon: Clock, label: 'Real-time', desc: 'Live processing' },
-  { icon: Layers, label: 'Scalable', desc: 'Cloud-native' },
-  { icon: Server, label: 'API First', desc: 'REST & GraphQL' },
-  { icon: Workflow, label: 'Automated', desc: 'CI/CD pipeline' },
-];
-
-const stats = [
-  { value: '10k+', label: 'Sim hours' },
-  { value: '99.9%', label: 'Uptime' },
-  { value: '<50ms', label: 'Latency' },
-  { value: '24/7', label: 'Support' },
+const capabilities = [
+  {
+    icon: Monitor,
+    label: 'Desktop & Web Apps',
+    desc: 'Full-stack applications for Windows, macOS, Linux, and the browser.',
+  },
+  {
+    icon: Smartphone,
+    label: 'Mobile Apps',
+    desc: 'Native and cross-platform mobile experiences.',
+  },
+  {
+    icon: Brain,
+    label: 'ML Models & Tools',
+    desc: 'Custom model training, fine-tuning, and developer tooling.',
+  },
+  {
+    icon: Cpu,
+    label: 'IoT & Embedded',
+    desc: 'ESP32-based devices, firmware, and sensor integration.',
+  },
+  {
+    icon: Eye,
+    label: 'Computer Vision',
+    desc: 'Detection, tracking, and vision pipelines for the real world.',
+  },
+  {
+    icon: Bot,
+    label: 'Robotics & Simulation',
+    desc: 'Policy training and sim-to-real with IsaacLab, Isaac Sim, and MuJoCo.',
+  },
+  {
+    icon: Workflow,
+    label: 'Model Inference',
+    desc: 'Serving, optimization, and integration into existing systems.',
+  },
+  {
+    icon: Layers,
+    label: 'Full-Stack',
+    desc: 'APIs, backends, and frontends delivered end to end.',
+  },
 ];
 
 export default function TechnologySection() {
@@ -35,7 +71,7 @@ export default function TechnologySection() {
           {
             opacity: 1,
             y: 0,
-            stagger: 0.1,
+            stagger: 0.08,
             duration: 0.6,
             ease: 'power2.out',
             scrollTrigger: {
@@ -60,58 +96,49 @@ export default function TechnologySection() {
       <div className="px-6 lg:px-16">
         {/* Section Header */}
         <h2 className="text-lg font-semibold text-white/50 uppercase tracking-wider mb-8">
-          Technology
+          Capabilities
         </h2>
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-6">
-          {/* Left - Activity Card */}
+          {/* Left - Approach */}
           <div className="ps5-activity-card p-6">
             <h3 className="font-sora font-bold text-2xl text-white mb-2">
-              Research & Development
+              From idea to production
             </h3>
             <p className="text-white/50 mb-6">
-              Simulation-first validation. Real-world data. Continuous learning.
+              One engineer covering the full stack — software, ML, embedded, and robotics.
             </p>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="p-4 rounded-xl bg-white/5"
-                >
-                  <div className="font-sora font-bold text-2xl text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-white/40">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
+              I take projects from first prototype to shipped product. That means
+              understanding the problem, choosing the right architecture, and building
+              something maintainable — not just a demo.
+            </p>
 
             <p className="text-white/60 text-sm leading-relaxed">
-              We train policies in high-fidelity simulation, validate in controlled 
-              environments, and deploy with live telemetry—feeding insights back into 
-              the next model iteration.
+              Whether it's an ESP32 device streaming sensor data, a computer-vision
+              model running in production, or a robot policy trained in simulation,
+              the work is designed to run reliably outside the lab.
             </p>
           </div>
 
-          {/* Right - Tech Stack */}
-          <div ref={cardsRef} className="grid grid-cols-2 gap-3">
-            {techStack.map((tech, index) => (
+          {/* Right - Capability Grid */}
+          <div ref={cardsRef} className="grid sm:grid-cols-2 gap-3">
+            {capabilities.map((cap, index) => (
               <div
                 key={index}
                 className="tech-card p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all group"
               >
-                <tech.icon 
-                  size={24} 
-                  className="text-white/40 group-hover:text-white/70 transition-colors mb-3" 
+                <cap.icon
+                  size={24}
+                  className="text-white/40 group-hover:text-white/70 transition-colors mb-3"
                 />
                 <h4 className="font-medium text-white text-sm mb-1">
-                  {tech.label}
+                  {cap.label}
                 </h4>
-                <p className="text-xs text-white/40">
-                  {tech.desc}
+                <p className="text-xs text-white/40 leading-relaxed">
+                  {cap.desc}
                 </p>
               </div>
             ))}
@@ -122,17 +149,17 @@ export default function TechnologySection() {
         <div className="mt-6 ps5-activity-card p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h4 className="font-sora font-semibold text-white mb-1">
-              Ready to deploy?
+              Have a project in mind?
             </h4>
             <p className="text-sm text-white/50">
-              Connect to your stack in days—not months.
+              Tell me what you're building — I'll tell you how I'd approach it.
             </p>
           </div>
           <a
             href="mailto:xertai.no@protonmail.com"
             className="px-6 py-2.5 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-colors whitespace-nowrap"
           >
-            Get started
+            Get in touch
           </a>
         </div>
       </div>

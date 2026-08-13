@@ -43,11 +43,11 @@ export default function ContactSection() {
           <div className="ps5-activity-card p-8 lg:p-12 text-center">
             {/* Title */}
             <h2 className="font-sora font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
-              Let's build together
+              Let's build something
             </h2>
             <p className="text-white/50 max-w-lg mx-auto mb-10">
-              Tell us what you're automating. We'll map a deployment plan 
-              to your environment and constraints.
+              Tell me what you have in mind — a product, a model, or a robot —
+              and I'll map out how to take it from idea to production.
             </p>
 
             {/* Contact Options */}

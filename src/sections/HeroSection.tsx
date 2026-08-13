@@ -56,10 +56,13 @@ export default function HeroSection() {
           {/* Tag */}
           <div className="flex items-center gap-2 mb-4">
             <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/70">
-              STARTUP
+              SOFTWARE
             </span>
             <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/70">
-              AI & AUTOMATION
+              ML & AI
+            </span>
+            <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/70">
+              ROBOTICS
             </span>
           </div>
 
@@ -70,13 +73,13 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl text-white/70 mb-2 font-light">
-            Code. Apps. AI Models. MCP.
+            Software. Machine learning. Robotics.
           </p>
 
           {/* Description */}
           <p className="text-base text-white/50 mb-8 max-w-lg leading-relaxed">
-            Building the future of intelligent automation. From cutting-edge AI models 
-            to seamless applications, we craft technology that works for you.
+            I design and build full-stack software, train machine-learning models,
+            and ship robotics and IoT systems — from first prototype to production.
           </p>
 
           {/* CTA Buttons */}
