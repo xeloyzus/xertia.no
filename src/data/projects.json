@@ -4,7 +4,7 @@
       "name": "Ghost Cleaner",
       "description": "A powerful, privacy-focused macOS disk cleanup utility with advanced scanning, smart risk assessment, and safe file recovery.",
       "url": "https://github.com/xeloyzus/GhostCleaner",
-      "tags": ["typescript", "computer-vision"]
+      "tags": ["macos", "swift"]
     }
   ]
 }
